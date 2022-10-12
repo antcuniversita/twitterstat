@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+   <%- include('../partials/head'); %>
+   <body>
+      <%- include('../partials/header'); %>
+      <!-- Main, parte centrale della pagina -->
+      <main>
+         <!-- Jumbotron, utilizzato per la parte superiore della pagina -->
+         <div class="jumbotron text-center">
+            <h1>Ciao, come posso aiutarti?</h1>
+         </div>
+         <!-- Creazione della sezione contenente le informazioni di contatto e il form per l'invio della mail -->
+         <!-- Definiamo un container -->
+         <!-- Abbiamo bisogno di due righe, quindi abbiamo due div con attributo class impostato a row -->
+         <!-- Nella prima riga abbiamo una sola colonna, quindi abbiamo un solo div impostato alla classe col* -->
+         <!-- Nella seconda riga abbiamo due colonne, quindi due div impostate alla classe col*, una per le informazioni di contatto e l'altra per l'invio della mail -->
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h2>Scegli il modo che preferisci per comunicare con me</h2>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6 mt-3">
+                  <p>Per qualsiasi informazione, segnalazione di bug o errori, non esitare a contattarmi.
+                  </p>
+                  <span>Indirizzo: <a href="#">Via Alberello, 123, 01234 Milano MI</a> <br/>
+                  Numero di telefono: <a href="#">+39 xxx xxx xx xx</a> <br/>
+                  Sito Web: <a href="#">www.sito-web-non-esistente.it</a> <br/>
+                  Apertura: <a href="#">Dal Lunedì al Venerdì: 8:00 - 17:00</a> <br/>
+                  <br />
+                  </span>
+               </div>
+               <!-- Creiamo un form -->
+               <!-- La div form-group consente l'interazione fra varie proprietà relative a un elemento di un form, come ad esempio label, testo di aiuto, testo di errore, validazione del contenuto -->
+               <!-- La div form-control rende i vari elementi del form tutti della stessa larghezza, aggiungendo anche uno stile base -->
+               <!-- La div con classe help-block with-errors, unita con required, mostra un errore in caso non venga -->
+               <div class="col-md-6">
+                  <form action="javascript:void(0);" role="form" id="contactForm" name="contact-form" data-toggle="validator" onsubmit="InviaDati(this)">
+                     <div class="form-group">
+                        <label class="control-label" for="name">Nome</label>
+                        <input class="form-control" id="name" type="text" name="name" required>
+                        <div class="help-block with-errors"></div>
+                     </div>
+                     <div class="form-group">
+                        <label class="control-label" for="email">E-Mail</label>
+                        <input class="form-control" id="email" type="email" name="email" required>
+                        <div class="help-block with-errors"></div>
+                     </div>
+                     <div class="form-group">
+                        <label class="control-label">Oggetto</label>
+                        <input class="form-control" id="msg_subject" type="text" name="subject"
+                           required>
+                        <div class="help-block with-errors"></div>
+                     </div>
+                     <div class="form-group">
+                        <label for="message" class="control-label">Messaggio</label>
+                        <textarea class="form-control" rows="3" id="message" name="message"
+                           required></textarea>
+                        <div class="help-block with-errors"></div>
+                     </div>
+                     <div class="form-submit mt-5">
+                        <button class="btn btn-common">Invia il messaggio</button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+         <!-- Modal, usato per visualizzare un popup -->
+         <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title">Avviso</h5>
+                     <!-- L'attributo data-dismiss chiude il modal -->
+                     <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                  <!-- Questa porzione verrà modificata in seguito nel codice Javascript per avvisare l'utente se il messaggio è stato inviato o meno -->
+                  <div class="modal-body"></div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <!-- Script che gestisce l'invio della mail -->
+      <script src="js/xhrmail.js"></script>
+      <%- include('../partials/footer'); %>
+      <%- include('../partials/script'); %>
+   </body>
+</html>

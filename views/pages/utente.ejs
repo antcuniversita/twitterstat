@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+   <%- include('../partials/head'); %>
+   <body>
+      <%- include('../partials/header'); %>
+      <main>
+         <!-- Jumbotron, utilizzato per la parte superiore della pagina -->
+         <div class="jumbotron text-center">
+            <h1>Analisi dell'utente: @<span id="utente-jumbotron"></span></h1>
+         </div>
+         <!-- Dichiariamo un container, usato per contenere le informazioni generiche -->
+         <h3 class="text-center">Dati generali</h3>
+         <div class="container py-4 py-xl-5">
+            <div class="row">
+               <div class="col text-center">
+                  <img id="propic" class="profile-image" src="" />
+               </div>
+               <div class="col">
+                  <p>Identificativo utente: <span id="idutente"></span></p>
+                  <p>Nominativo utente: <span id="nominativo"></span></p>
+                  <p>Posizione geografica: <span id="geo"></span></p>
+                  <p>Descrizione profilo: <span id="desc"></span></p>
+                  <p>Sito web dell'utente: <a href="" id="url"></a></p>
+                  <p>Stato verificato: <span id="verificato"></span></p>
+               </div>
+               <div class="col">
+                  <p>Numero following: <span id="following"></span></p>
+                  <p>Numero followers: <span id="followers"></span></p>
+                  <p>Rapporto fra followers e following: <span id="rapp_foll"></span></p>
+                  <p>Data creazione account: <span id="data"></span></p>
+                  <p>Like totali che l'utente ha messo ad altri utenti: <span id="likealtri"></span></p>
+                  <p>Foto background: <a href="" id="backpic"></a></p>
+               </div>
+            </div>
+         </div>
+         <h3 class="text-center">Infografiche e altre statistiche</h3>
+         <!-- Dichiariamo un container, usato per contenere infografiche e altre statistiche -->
+         <div class="container py-4 py-xl-5">
+            <div class="row">
+               <p>A causa delle limitazioni imposte da Twitter, è possibile solamente recuperare e analizzare
+                  gli ultimi 200 Tweet. In questa sessione sono stati analizzati gli ultimi <span id="numtweet"></span>
+                  Tweet. <br /> Il Tweet più vecchio analizzato è il seguente: <a href=""
+                     id="idprimotweet"></a> in
+                  data: <span id="dataprimotweet"></span>. <br /> L'ultimo Tweet analizzato è il seguente: <a
+                     href="" id="idultimotweet"></a> in data: <span id="dataultimotweet"></span>.
+                  <br /> Il Tweet con più like è il seguente: <a href="" id="idtweetpiulike"></a> con <span
+                     id="tweetpiulike"></span> like. <br />Il Tweet con più retweet è il seguente: <a href=""
+                     id="idtweetpiuretweet"></a> con <span id="tweetpiuretweet"></span> retweet.
+               </p>
+            </div>
+            <br />
+            <div class="row text-center">
+               <div class="col-md-4">
+                  <h4>Media Like vs Retweet</h4>
+                  <div>
+                     <canvas id="ChartMedia"></canvas>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <h4>Numero Tweet vs Retweet</h4>
+                  <div>
+                     <canvas id="ChartTweetRetweet"></canvas>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <h4>Numero Hashtag vs Menzioni vs Link vs Foto vs Video (i retweet vengono ignorati)</h4>
+                  <div>
+                     <canvas id="ChartMix"></canvas>
+                  </div>
+               </div>
+            </div>
+            <br />
+            <br />
+            <div class="row text-center">
+               <div class="col-xl">
+                  <h4>Tweet pubblicati ogni mese</h4>
+                  <div>
+                     <canvas id="ChartEvoluzioneTempo"></canvas>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Modal, usato per visualizzare un popup -->
+         <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title">Avviso</h5>
+                     <!-- L'attributo data-dismiss chiude il modal -->
+                     <button type="button" class="close chiudi" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                  <!-- Questa porzione verrà modificata in seguito nel codice Javascript per segnalare errori all'utente  -->
+                  <div class="modal-body"></div>
+                  <div class="modal-footer">
+                     <a href="/" class="btn btn-info homepage" role="button">Homepage</a>
+                     <button type="button" class="btn btn-secondary chiudi" data-dismiss="modal">Chiudi</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <%- include('../partials/footer'); %>
+      <%- include('../partials/script'); %>
+      <script src="js/xhrapi.js"></script>
+   </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "twitterstat",
+  "version": "1.0.0",
+  "description": "#TwitterStat è una applicazione che consente di ottenere informazioni, statistiche e infografiche relative a un utente iscritto alla piattaforma Twitter",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antcuniversita/twitterstat.git"
+  },
+  "author": "Antonio Cannito",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antcuniversita/twitterstat/issues"
+  },
+  "homepage": "https://github.com/antcuniversita/twitterstat#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemailer": "^6.8.0",
+    "path": "^0.12.7",
+    "request": "^2.88.2"
+  }
+}

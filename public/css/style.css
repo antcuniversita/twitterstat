@@ -1,0 +1,64 @@
+.logoimage {
+    height: 30px;
+    width: 30px;
+}
+
+.btn-space {
+    margin-left: 0.5rem;
+}
+
+.space-container {
+    margin-bottom: 3rem;
+}
+
+.navbar,
+.jumbotron {
+    background-color: #B1D4E0;
+}
+
+.jumbotron {
+    border-radius: 0 0 6rem 6rem;
+}
+
+.service-1 {
+    border-radius: 6rem 6rem 6rem 6rem;
+    margin-bottom: 3rem;
+}
+
+.btn-common {
+    border-radius: 3rem;
+    background-color: #B1D4E0;
+}
+
+.page-footer {
+    margin-top: 1.7rem;
+    background-color: #B1D8B7;
+    color: black;
+    padding: 1.7rem 0 1rem 0;
+}
+
+.footer-copyright {
+    padding: 0.5rem 0;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+}
+.service-image {
+    width: 64px;
+    height: 64px;
+}
+
+.space-this {
+    margin-bottom: 3rem;
+}
+
+.howto-cards {
+    height: 160px;
+    width: 160px;
+}
+
+.my-5 {
+    border-top: 2px dotted #FAA0A0;
+}

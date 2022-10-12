@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+   <%- include('../partials/head'); %>
+   <body>
+      <%- include('../partials/header'); %>
+      <main>
+         <!-- Jumbotron, utilizzato per la parte superiore della pagina -->
+         <div class="jumbotron text-center">
+            <h1>#TwitterStat</h1>
+            <br /> <br />
+            <h4>Twitter consente ai suoi iscritti di pubblicare parole, foto, video e diversi tipi di contenuti. Questo social network agisce anche come un canale di comunicazione e uno spazio di incontro con persone che hanno i nostri stessi interessi.</h4>
+            <h4>#TwitterStat è una applicazione di analitica Twitter che consente di ottenere informazioni, statistiche e infografiche relative a un determinato utente. Tutti i dati vengono raccolti ed elaborati in tempo reale per garantire la massima accuratezza.</h4>
+            <h4>Per iniziare, inserisci l'username dell'utente che vuoi analizzare nel riquadro qui sotto:</h4>
+         </div>
+         <!-- Sezione del sito web relativa all'acquisizione dell'username -->
+         <div class="container space-container">
+            <form action="utente.html" method="get">
+               <!-- input-group è necessario per unire e stilare nello stesso modo (usando lo stile predefinito di bootstrap) barra di ricerca e i due button -->
+               <div class="input-group">
+                  <input type="text" id="username" name="username" class="form-control" placeholder="Inserisci qui l'username, senza @" required>
+                  <div class="input-group-append">
+                     <input class="btn btn-outline-secondary" type="submit" value="Analizza">
+                     <input class="btn btn-outline-secondary" type="reset" value="Resetta">
+                  </div>
+               </div>
+            </form>
+         </div>
+         <!-- Parte del sito dedicata alla spiegazione delle caratteristiche base offerte dal servizio -->
+         <!-- Definiamo un container -->
+         <!-- Abbiamo bisogno di una riga, quindi abbiamo un solo div con attributo class impostato a row -->
+         <!-- Abbiamo tre colonne in una riga, quindi definiamo due div con classe col-* -->
+         <!-- Inseriamo in ogni colonna una card -->
+         <div class="bg-light py-5 service-1">
+            <h2 class="text-center space-this">Perchè scegliere il nostro servizio?</h2>
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="card border-0 card-shadow mb-4">
+                        <div class="card-body text-center">
+                           <div class="my-3"><img class="service-image" src="img/free-svgrepo-com.svg" /></div>
+                           <h6 class="font-weight-medium">Gratuito</h6>
+                           <p class="mt-3">Non è necessario effettuare alcun tipo di pagamento, gratuito per tutti
+                              gli utenti.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="card border-0 card-shadow mb-4">
+                        <div class="card-body text-center">
+                           <div class="my-3"><img class="service-image" src="img/smartphone-svgrepo-com.svg" />
+                           </div>
+                           <h6 class="font-weight-medium">Compatibile</h6>
+                           <p class="mt-3">Compatibilità garantita con qualsiasi dispositivo che sia dotato di un
+                              browser.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="card border-0 card-shadow mb-4">
+                        <div class="card-body text-center">
+                           <div class="my-3"><img class="service-image" src="img/file-svgrepo-com.svg" /></div>
+                           <h6 class="font-weight-medium">Senza registrazione</h6>
+                           <p class="mt-3">Non è richiesta alcun tipo di registrazione, né su Twitter né su questo
+                              sito.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Parte del sito dedicata alla spiegazione di come utilizzare il servizio -->
+         <!-- Definiamo un container -->
+         <!-- Usiamo una div con l'attributo class impostato a row per creare una riga, ne abbiamo bisogno di quattro quindi ne creiamo quattro -->
+         <!-- Creiamo una sola colonna per ogni riga, usando una div impostata a col* -->
+         <h2 class="text-center space-this">Come si usa #TwitterStat?</h2>
+         <div class="container py-4 py-xl-5">
+            <div class="row">
+               <div class="col-md-8 col-xl-9 mx-auto p-1">
+                  <img src="img/cerca.png" class="howto-cards rounded float-right img-fluid">
+                  <h4 class="font-weight-bold">#1</h4>
+                  <p>Individua e copia, visitando il sito di <a href="https://www.twitter.com">Twitter</a>, l'username
+                     di cui si vogliono conoscere le statistiche.
+                  </p>
+               </div>
+            </div>
+            <hr class="my-5">
+            <div class="row">
+               <div class="col-md-8 col-xl-9 mx-auto p-1 text-right">
+                  <img src="img/barra-navigazione.png" class="howto-cards rounded float-left img-fluid">
+                  <h4 class="font-weight-bold">#2</h4>
+                  <p>Incolla nella barra di ricerca di #TwitterStat l'username appena copiato e premi il pulsante
+                     "Analizza". Il pulsante "Resetta" pulisce la barra di ricerca.
+                  </p>
+               </div>
+            </div>
+            <hr class="my-5">
+            <div class="row">
+               <div class="col-md-8 col-xl-9 mx-auto p-1">
+                  <img src="img/elaborazione.png" class="howto-cards rounded float-right img-fluid">
+                  <h4 class="font-weight-bold">#3</h4>
+                  <p>Aspetta che il sistema effettui l'acquisizione e l'elaborazione dei dati. In alcuni casi questa
+                     operazione potrebbe richiedere qualche minuto.
+                  </p>
+               </div>
+            </div>
+            <hr class="my-5">
+            <div class="row">
+               <div class="col-md-8 col-xl-9 mx-auto p-1 text-right">
+                  <img src="img/risultati.png" class="howto-cards rounded float-left img-fluid">
+                  <h4 class="font-weight-bold">#4</h4>
+                  <p>Una volta che l'elaborazione è terminata, verrai reindirizzato alla pagina dei risultati.</p>
+               </div>
+            </div>
+         </div>
+      </main>
+      <%- include('../partials/footer'); %>
+      <%- include('../partials/script'); %>
+   </body>
+</html>
